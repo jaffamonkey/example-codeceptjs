@@ -1,0 +1,48 @@
+{
+	"tests": "tests/**/*_test.js",
+	"timeout": 10000,
+	"output": "./test-results",
+	"helpers": {
+		"Nightmare": {
+			"url": "https://www.prismapp.io",
+			"show": true,
+			"restart": true,
+			"disableScreenshots": true,
+			"uniqueScreenshotNames": false,
+			"waitForAction": 1000,
+			"waitForTimeout": 8000,
+			"windowSize": "1280x1024"
+		}
+	},
+	"include": {
+		"I": "./steps/custom_steps.js",
+		"indexPage": "./pages/IndexPage.js",
+		"seo": "./fragments/Seo.js",
+		"shamu": "./fragments/Shamu.js"
+	},
+	"bootstrap": false,
+	"mocha": {
+		"reporterOptions": {
+			"codeceptjs-cli-reporter": {
+				"stdout": "-",
+				"options": {
+					"verbose": false
+				}
+			},
+			"mochawesome": {
+				"stdout": "-",
+				"options": {
+					"reportDir": "./test-results",
+					"reportFilename": "report"
+				}
+			},
+			"mocha-junit-reporter": {
+				"stdout": "-",
+				"options": {
+					"mochaFile": "test-results/result.xml"
+				}
+			}
+		}
+	},
+	"name": "example-codeceptjs"
+}
