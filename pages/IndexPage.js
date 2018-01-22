@@ -11,7 +11,7 @@ module.exports = {
   // Element getters
   header: {
     logo: { css: 'div[class="logo"]' },
-    desktopMenu: { id: 'desktop-menu' },
+    desktopMenu: { id: 'ul#desktop-menu' },
     berandaMenu: { css: 'ul#desktop-menu li a[href="#intro"]' },
     fiturMenu: { css: 'ul#desktop-menu li a[href="#0"]' },
     pricingMenu: { css: 'ul#desktop-menu li a[href="/pricing"]' },
