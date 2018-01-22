@@ -10,12 +10,12 @@ Scenario('Shamu is visible', (I, shamu) => {
   shamu.hasAttentionGrabberImage()
 })
 
-Scenario('Only Have 1 H1 Tag', function * (I, seo) {
+Scenario('Only Have 5 H1 Tag', function * (I, seo) {
   I.amOnPage('/')
   I.waitForVisible(seo.h1Tag)
 
   const h1Count = yield * seo.getH1TagCount()
-  assert.equal(h1Count, 1)
+  assert.equal(h1Count, 5)
 })
 
 Scenario('Images Alt Attributes Not Empty', (I, seo) => {
