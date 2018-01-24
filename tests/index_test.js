@@ -42,9 +42,7 @@ Scenario('Meta Keywords Should Not Be Empty', (I, seo) => {
 Scenario('Header Should Be Displayed Properly', (I, indexPage) => {
   I.amOnPage('/')
   I.waitForVisible(indexPage.header.logo)
-
   I.seeElement(indexPage.header.logo)
-  I.seeElement(indexPage.header.desktopMenu)
 })
 
 Scenario('Header Menu Should Be Displayed Properly', (I, indexPage) => {
