@@ -55,4 +55,3 @@ Scenario('Header Menu Should Be Displayed Properly', (I, indexPage) => {
   I.seeElement(indexPage.header.ceritaSuksesMenu)
   I.seeElement(indexPage.header.freeTrialButton)
 })
-})
