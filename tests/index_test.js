@@ -45,13 +45,3 @@ Scenario('Header Should Be Displayed Properly', (I, indexPage) => {
   I.seeElement(indexPage.header.logo)
 })
 
-Scenario('Header Menu Should Be Displayed Properly', (I, indexPage) => {
-  I.amOnPage('/')
-  I.waitForVisible(indexPage.header.berandaMenu)
-  I.seeElement(indexPage.header.berandaMenu)
-  I.seeElement(indexPage.header.fiturMenu)
-  I.seeElement(indexPage.header.pricingMenu)
-  I.seeElement(indexPage.header.caraKerjaMenu)
-  I.seeElement(indexPage.header.ceritaSuksesMenu)
-  I.seeElement(indexPage.header.freeTrialButton)
-})
